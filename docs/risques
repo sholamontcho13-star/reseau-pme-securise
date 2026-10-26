@@ -1,0 +1,10 @@
+# Risques identifiés et mesures prévues
+
+| N° | Risque | Impact | Mesure prévue |
+|----|--------|--------|---------------|
+| R1 | Un visiteur accède aux ressources internes depuis le Wi-Fi invités | Fuite de documents clients | VLAN Invités isolé + ACL (accès Internet uniquement) |
+| R2 | Un faux serveur DHCP est branché sur le réseau | Redirection du trafic, interception | DHCP snooping |
+| R3 | Un appareil non autorisé est branché sur une prise réseau | Intrusion dans le réseau interne | Port-security + ports inutilisés désactivés |
+| R4 | Un équipement est administré sans protection (Telnet, mots de passe en clair) | Prise de contrôle des équipements | SSH uniquement, mots de passe chiffrés, VLAN Management restreint |
+| R5 | Le serveur web exposé sert de point d'entrée vers le réseau interne | Compromission du réseau interne | DMZ isolée + ACL (HTTP/HTTPS uniquement, pas d'initiative vers le LAN) |
+| R6 | Le lien entre le siège et l'agence tombe | Interruption d'activité de l'agence | Lien de secours + OSPF |
